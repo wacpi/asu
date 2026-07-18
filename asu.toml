@@ -1,0 +1,20 @@
+# ASU 配置 - 专属 ImmortalWrt
+upstream_url = "https://downloads.immortalwrt.org"
+allow_defaults = true
+log_level = "INFO"
+
+# ImageBuilder 容器镜像
+base_container = "ghcr.io/openwrt/imagebuilder"
+
+# 构建缓存 TTL
+build_ttl = "7d"
+build_ttl_unversioned = "24h"
+build_defaults_ttl = "30m"
+build_failure_ttl = "1h"
+max_pending_jobs = 200
+job_timeout = "10m"
+
+# 允许的仓库源（ImmortalWrt 官方源）
+repository_allow_list = [
+    "https://downloads.immortalwrt.org/",
+]
